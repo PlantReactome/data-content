@@ -2,7 +2,7 @@
 
 <form id="search_form" action="${pageContext.request.contextPath}/query" method="get">
 
-    <input id="local-searchbox" type="search" class="search" name="q" placeholder="e.g. O95631, NTN1, signaling by EGFR, glucose" value="${q}"/>
+    <input id="local-searchbox" type="search" class="search" name="q" placeholder="e.g. YUC4, cytokinin, TOC1, AT5G16530" value="${q}"/> <%--PR-JP--%>
     <c:choose>
         <c:when test="${not empty species}">
             <c:forEach var="item" items="${species}">
@@ -10,7 +10,7 @@
             </c:forEach>
         </c:when>
         <c:otherwise>
-            <input type="hidden" name="species" value="Homo sapiens"/>
+            <input type="hidden" name="species" value="Oryza sativa"/>  <%--PR-JP--%>
             <input type="hidden" name="species" value="Entries without species"/>
         </c:otherwise>
     </c:choose>

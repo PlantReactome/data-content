@@ -63,7 +63,7 @@ $(".plus").click(function () {
 });
 
 $('#availableSpeciesSel').ready(function() {
-    var DEFAULT_SPECIES = 'Homo sapiens';
+    var DEFAULT_SPECIES = 'Oryza sativa'; // JP - PR
 
     /** Check if hash is present in the URL **/
     var hash = decodeURIComponent(window.location.hash);

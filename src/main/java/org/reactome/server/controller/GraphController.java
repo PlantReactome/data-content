@@ -111,7 +111,8 @@ class GraphController {
 
     @RequestMapping(value = "/schema/objects/{className}", method = RequestMethod.GET)
     public String getClassBrowserInstances(@PathVariable String className,
-                                           @RequestParam(defaultValue = "9606") String speciesTaxId, //default Human
+                                           //@RequestParam(defaultValue = "9606") String speciesTaxId, //default Human
+                                           @RequestParam(defaultValue = "4530") String speciesTaxId, // PR - JP
                                            @RequestParam(defaultValue = "1") Integer page,
                                            ModelMap model) throws ClassNotFoundException {
 
@@ -137,7 +138,8 @@ class GraphController {
 
             //Only keep information related to species when it makes sense
             model.addAttribute("speciesList", speciesService.getSpecies());
-            if(!speciesTaxId.equals("9606")){
+            //if(!speciesTaxId.equals("9606")){
+            if(!speciesTaxId.equals("4530")){ //  PR - JP
                 model.addAttribute("selectedSpecies", speciesTaxId);
             }
         } catch (Exception e) {

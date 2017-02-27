@@ -11,7 +11,7 @@
             for Species:
                 <select name="availableSpecies" id="availableSpeciesSel" class="speciesSelection" >
                     <c:forEach items="${availableSpecies}" var="species">
-                        <option value="${fn:replace(species, ' ', '_')}" ${species == 'Homo_sapiens' ? 'selected' : ''}>${species}</option>
+                        <option value="${fn:replace(species, ' ', '_')}" ${species == 'Oryza_sativa' ? 'selected' : ''}>${species}</option> <%--PR-JP--%>
                     </c:forEach>
                 </select>
             <%--</div>--%>

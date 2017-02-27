@@ -258,7 +258,7 @@
             <form id="facetReset" action="./query" method="get">
                 <div  class="filterButtons">
                     <input type="hidden" name="q" value="<c:out value='${q}'/>"/>
-                    <input type="hidden" name="species" value="Homo sapiens"/>
+                    <input type="hidden" name="species" value="Oryza sativa"/> <!-- PR-JP -->
                     <input type="hidden" name="species" value="Entries without species"/>
                     <input type="hidden" name="cluster" value="true"/>
                     <input type="submit" class="submit" value="Reset filters"  />
